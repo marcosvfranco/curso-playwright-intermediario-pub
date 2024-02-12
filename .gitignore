@@ -1,6 +1,6 @@
 # Playwright artifacts
-/playrwight-report
-/test-results
+playwright-report
+test-results
 
 # Logs
 logs
