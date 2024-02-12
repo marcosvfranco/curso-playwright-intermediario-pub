@@ -1,3 +1,7 @@
+# Playwright artifacts
+/playrwight-report
+/test-results
+
 # Logs
 logs
 *.log
