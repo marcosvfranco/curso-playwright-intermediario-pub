@@ -21,6 +21,7 @@ Bem vindo ao Curso Intermediário de Playwright! Leia as instruções deste arqu
 -   Conhecimento básico de NodeJS
 -   Conhecimento Básico / Intermediário de JS
 -   Conhecimento Básico de TS
+-   Conhecimento básico de GIT
 
 ## Aulas
 
