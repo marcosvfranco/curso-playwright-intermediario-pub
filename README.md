@@ -2,9 +2,6 @@
 
 Bem vindo ao Curso Intermediário de Playwright! Leia as instruções deste arquivo para instalar o projeto e conhecer a estrutura do curso.
 
-Se você precisa de conhecimentos básicos de Playwright, acesse meu outro curso aqui:
-https://www.udemy.com/course/testes-automatizados-com-playwright-typescript-basico-pt-br/?referralCode=2595640BEDD200031B67
-
 # Instalação
 
 -   Clone este repositório:
@@ -19,6 +16,8 @@ https://www.udemy.com/course/testes-automatizados-com-playwright-typescript-basi
 ## Pré requisitos
 
 -   Conhecimento básico de Playwright
+    -   Se você precisa de conhecimentos básicos de Playwright, acesse meu outro curso aqui (entre em contato comigo que posso fornecer um cupom de desconto pra você):
+        https://www.udemy.com/course/testes-automatizados-com-playwright-typescript-basico-pt-br/?referralCode=2595640BEDD200031B67
 -   Conhecimento básico de NodeJS
 -   Conhecimento Básico / Intermediário de JS
 -   Conhecimento Básico de TS
