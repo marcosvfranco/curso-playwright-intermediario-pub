@@ -18,11 +18,14 @@ https://www.udemy.com/course/testes-automatizados-com-playwright-typescript-basi
 
 ## Pré requisitos
 
--   Irei apresentar os pre requisitos do curso nas primeiras aulas, sobre o conhecimento que você deve ter para este curso e tanbém qual a configuração mínima do seu computador para poder executar os programas utilizados aqui
+-   Conhecimento básico de Playwright
+-   Conhecimento básico de NodeJS
+-   Conhecimento Básico / Intermediário de JS
+-   Conhecimento Básico de TS
 
 ## Aulas
 
--   🎥 Cada aula terá um video explicativo do tema da aula feito por mim, com exemplos práticos dos comandos utilizados e acesso a documentação oficial do Playwright
+-   🎥 Cada aula terá um video explicativo do tema da aula feito por mim, com exemplos práticos dos comandos utilizados e acesso a documentação oficial do Playwright.
 -   📖 Em cada aula será mencionado a documentação utilizada sempre que isso for aplicável à aula.
 
 # 📥 Instalação dos Softwares utilizados
@@ -34,3 +37,4 @@ Para evitar discrepâncias sobre erros e comandos utilizados, dê preferência p
 -   🔗 [Git e Git Bash](https://git-scm.com/downloads) - estou utilizando a versão 2.39.3 neste curso
 -   -   Alternativa - Terminal do MacOS ou iTerm2
 -   🔗 [VSCode](https://code.visualstudio.com/) - estou utilizando a versão 1.86.1 neste curso
+-   Playwright 1.41.2 - Já está definida no package.json
