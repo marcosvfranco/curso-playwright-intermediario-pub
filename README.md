@@ -38,3 +38,9 @@ Para evitar discrepâncias sobre erros e comandos utilizados, dê preferência p
 -   -   Alternativa - Terminal do MacOS ou iTerm2
 -   🔗 [VSCode](https://code.visualstudio.com/) - estou utilizando a versão 1.86.1 neste curso
 -   Playwright 1.41.2 - Já está definida no package.json
+
+# Configuração do PC
+
+-   Computador com no mínimo 8 Gb de RAM
+-   Processador com 2 ou mais cores / núcleos
+-   Sistema Operacional Windows, MacOS ou Linux
