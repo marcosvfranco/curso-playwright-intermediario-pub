@@ -34,10 +34,10 @@ Acesse e instale cada um dos seguintes softwares para prosseguir com o curso.
 Para evitar discrepâncias sobre erros e comandos utilizados, dê preferência para utilizar a mesma versão que utilizo no curso:
 
 -   🔗 [NodeJS](https://nodejs.org/en/download) - estou utilizando a versão 20.9.0 neste curso
--   🔗 [Git e Git Bash](https://git-scm.com/downloads) - estou utilizando a versão 2.39.3 neste curso
+-   🔗 [Git e Git Bash](https://git-scm.com/downloads) - estou utilizando a versão 2.39.5 neste curso
 -   -   Alternativa - Terminal do MacOS ou iTerm2
--   🔗 [VSCode](https://code.visualstudio.com/) - estou utilizando a versão 1.86.1 neste curso
--   Playwright 1.41.2 - Já está definida no package.json
+-   🔗 [VSCode](https://code.visualstudio.com/) - estou utilizando a versão 1.93.1 neste curso
+-   Playwright 1.47.2 - Já está definida no package.json
 
 # Configuração do PC
 
