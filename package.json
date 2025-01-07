@@ -1,25 +1,22 @@
 {
-    "name": "saucedemo-playwright",
+    "name": "curso-intermediario-playwright-pub",
     "version": "1.0.0",
-    "description": "An E2E Test Automation Framework using Playwright",
+    "description": "Projeto base e aulas para o curso intermediario de Playwright de Marcos Franco",
     "main": "index.js",
     "scripts": {
-        "testNH": "cross-env NOHEADLESS=true npx playwright test",
         "test": "npx playwright test",
-        "debug": "PWDEBUG=1 npm run test"
+        "ui": "npx playwright test --ui"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/marcosvfranco/saucedemo-playwright.git"
+        "url": "git+https://github.com/marcosvfranco/curso-playwright-intermediario-pub.git"
     },
-    "keywords": [
-        "playwright"
-    ],
-    "author": "marcosvfranco",
+    "author": "Marcos Franco",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/marcosvfranco/saucedemo-playwright/issues"
+        "url": "https://github.com/marcosvfranco/curso-playwright-intermediario-pub/issues"
     },
+    "homepage": "https://github.com/marcosvfranco/curso-playwright-intermediario-pub#readme",
     "devDependencies": {
         "@playwright/test": "^1.49.1",
         "@types/node": "^22.10.5",
@@ -28,6 +25,5 @@
         "eslint": "^9.17.0",
         "eslint-plugin-playwright": "^2.1.0",
         "prettier": "^3.4.2"
-    },
-    "homepage": "https://github.com/marcosvfranco/saucedemo-playwright#readme"
+    }
 }
