@@ -1,6 +1,7 @@
 # Playwright artifacts
 playwright-report
 test-results
+state.json
 
 # Logs
 logs
