@@ -1,0 +1,31 @@
+{
+    "name": "curso-intermediario-playwright-pub",
+    "version": "1.0.0",
+    "description": "Projeto base e aulas para o curso intermediario de Playwright de Marcos Franco",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx playwright test",
+        "ui": "npx playwright test --ui"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marcosvfranco/curso-playwright-intermediario-pub.git"
+    },
+    "author": "Marcos Franco",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/marcosvfranco/curso-playwright-intermediario-pub/issues"
+    },
+    "homepage": "https://github.com/marcosvfranco/curso-playwright-intermediario-pub#readme",
+    "devDependencies": {
+        "@playwright/test": "^1.55.0",
+        "@eslint/js": "^9.29.0",
+        "@types/node": "^22.10.5",
+        "@typescript-eslint/eslint-plugin": "^8.35.0",
+        "@typescript-eslint/parser": "^8.35.0",
+        "eslint-plugin-playwright": "^2.2.0",
+        "jiti": "^2.4.2",
+        "prettier": "^3.6.1",
+        "typescript-eslint": "^8.35.0"
+    }
+}
