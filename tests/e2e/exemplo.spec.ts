@@ -11,7 +11,7 @@ test('Saucedemo products page has correct label text', async ({ page }) => {
     await page.locator('[data-test="password"]').fill('secret_sauce');
     await page.locator('input#login-button').click();
 
-    await expect(page).toHaveURL('https://www.saucedemo.com/v1/inventory.html');
-    const productsLabel = page.locator('div.product_label');
+    await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+    const productsLabel = page.getByTestId('title');
     await expect(productsLabel).toHaveText('Products');
 });
