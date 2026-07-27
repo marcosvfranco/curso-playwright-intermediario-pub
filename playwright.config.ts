@@ -41,6 +41,16 @@ const config: PlaywrightTestConfig = {
         },
 
         {
+            name: 'Desktop Chrome',
+            use: {
+                ...devices['Desktop Chrome'],
+                channel: 'chrome',
+                baseURL: 'https://www.demoblaze.com'
+            },
+            testMatch: /demoblaze\.spec\.ts/
+        },
+
+        {
             name: 'firefox',
             use: { ...devices['Desktop Firefox'] },
             testMatch: ['**/tests/e2e/firefox/**/*.spec.ts']
