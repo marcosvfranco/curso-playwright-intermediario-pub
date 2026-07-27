@@ -6,6 +6,8 @@ import { PlaywrightTestConfig, devices } from '@playwright/test';
  */
 // require('dotenv').config();
 
+const authFile = '.auth.json';
+
 /**
  * @see https://playwright.dev/docs/test-configuration
  * @type {import('@playwright/test').PlaywrightTestConfig}
@@ -36,8 +38,19 @@ const config: PlaywrightTestConfig = {
     /* Configure projects for major browsers */
     projects: [
         {
+            name: 'setup',
+            testMatch: /global\.setup\.ts/,
+            use: { ...devices['Desktop Chrome'] }
+        },
+
+        {
             name: 'chromium',
-            use: { ...devices['Desktop Chrome'], channel: 'chrome' }
+            use: {
+                ...devices['Desktop Chrome'],
+                channel: 'chrome',
+                storageState: authFile
+            },
+            dependencies: ['setup']
         },
 
         {
