@@ -36,48 +36,52 @@ const config: PlaywrightTestConfig = {
     /* Configure projects for major browsers */
     projects: [
         {
-            name: 'chromium',
-            use: { ...devices['Desktop Chrome'], channel: 'chrome' }
+            name: 'Setup Demoblaze',
+            use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+            testMatch: /setup\.ts/
         },
 
         {
             name: 'Desktop Chrome',
+            dependencies: ['Setup Demoblaze'],
             use: {
                 ...devices['Desktop Chrome'],
                 channel: 'chrome',
-                baseURL: 'https://www.demoblaze.com'
+                storageState: 'storageState.json'
             },
             testMatch: /demoblaze\.spec\.ts/
         },
 
         {
             name: 'firefox',
-            use: { ...devices['Desktop Firefox'] },
-            testMatch: ['**/tests/e2e/firefox/**/*.spec.ts']
+            dependencies: ['Setup Demoblaze'],
+            use: {
+                ...devices['Desktop Firefox'],
+                storageState: 'storageState.json'
+            },
+            testMatch: /demoblaze\.spec\.ts/
         },
 
         {
             name: 'webkit',
-            use: { ...devices['Desktop Safari'] }
-        },
-
-        {
-            name: 'custom-project',
+            dependencies: ['Setup Demoblaze'],
             use: {
-                ...devices['iPhone 17'],
-                viewport: { width: 390, height: 844 }
+                ...devices['Desktop Safari'],
+                storageState: 'storageState.json'
             },
-            testIgnore: ['**/tests/e2e/firefox/**/*.spec.ts']
+            testMatch: /demoblaze\.spec\.ts/
         },
 
         /* Test against mobile viewports. */
         {
             name: 'Mobile Chrome',
-            use: { ...devices['Pixel 5'] }
+            use: { ...devices['Pixel 5'] },
+            testIgnore: /demoblaze\.spec\.ts/
         },
         {
             name: 'Mobile Safari',
-            use: { ...devices['iPhone 12'] }
+            use: { ...devices['iPhone 12'] },
+            testIgnore: /demoblaze\.spec\.ts/
         }
 
         /* Test against branded browsers. */
