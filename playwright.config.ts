@@ -38,9 +38,15 @@ const config: PlaywrightTestConfig = {
         {
             name: 'Setup Demoblaze',
             use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-            testMatch: /setup\.ts/
+            testMatch: /setup\.ts/,
+            teardown: 'Teardown Demoblaze'
         },
 
+        {
+            name: 'Teardown Demoblaze',
+            use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+            testMatch: /teardown\.ts/
+        },
         {
             name: 'Desktop Chrome',
             dependencies: ['Setup Demoblaze'],
