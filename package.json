@@ -5,7 +5,11 @@
     "main": "index.js",
     "scripts": {
         "test": "npx playwright test",
-        "ui": "npx playwright test --ui"
+        "ui": "npx playwright test --ui",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier \"tests/**/*.ts\" --write",
+        "format:check": "prettier \"tests/**/*.ts\" --check"
     },
     "repository": {
         "type": "git",
@@ -25,7 +29,7 @@
         "@typescript-eslint/parser": "^8.35.0",
         "eslint-plugin-playwright": "^2.2.0",
         "jiti": "^2.4.2",
-        "prettier": "^3.6.1",
+        "prettier": "^3.9.6",
         "typescript-eslint": "^8.35.0"
     }
 }
