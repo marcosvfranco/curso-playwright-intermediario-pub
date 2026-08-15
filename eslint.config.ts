@@ -18,11 +18,6 @@ export default tseslint.config([
             }
         },
 
-        plugins: {
-            '@typescript-eslint': typescriptParser,
-            playwright: playwright
-        },
-
         rules: {
             ...playwright.configs['flat/recommended'].rules,
 
