@@ -11,6 +11,11 @@ import { PlaywrightTestConfig, devices } from '@playwright/test';
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */
 const config: PlaywrightTestConfig = {
+    // timeout: 30 * 1000, // timneout para cada teste
+    // expect: {
+    //     timeout: 5000, // timeout para cada expect
+    // },
+
     testDir: './tests',
     fullyParallel: true,
     forbidOnly: !!process.env.CI,
@@ -19,12 +24,14 @@ const config: PlaywrightTestConfig = {
     reporter: 'html',
 
     use: {
+        // navigationTimeout: 30 * 1000,
+        // actionTimeout: 0,
         testIdAttribute: 'data-test',
         // baseURL: 'https://www.saucedemo.com',
         headless: process.env.NOHEADLESS ? false : true,
         // storageState: 'storageState.json',
         // viewport: { width: 1280, height: 720 },
-        ignoreHTTPSErrors: true
+        ignoreHTTPSErrors: true,
         // video: 'on',
         // screenshot: 'only-on-failure',
         // trace: 'on',
@@ -39,13 +46,13 @@ const config: PlaywrightTestConfig = {
             name: 'Setup Demoblaze',
             use: { ...devices['Desktop Chrome'], channel: 'chrome' },
             testMatch: /setup\.ts/,
-            teardown: 'Teardown Demoblaze'
+            teardown: 'Teardown Demoblaze',
         },
 
         {
             name: 'Teardown Demoblaze',
             use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-            testMatch: /teardown\.ts/
+            testMatch: /teardown\.ts/,
         },
         {
             name: 'Desktop Chrome',
@@ -53,9 +60,9 @@ const config: PlaywrightTestConfig = {
             use: {
                 ...devices['Desktop Chrome'],
                 channel: 'chrome',
-                storageState: 'storageState.json'
+                storageState: 'storageState.json',
             },
-            testMatch: /demoblaze\.spec\.ts/
+            testMatch: /demoblaze\.spec\.ts/,
         },
 
         {
@@ -63,9 +70,9 @@ const config: PlaywrightTestConfig = {
             dependencies: ['Setup Demoblaze'],
             use: {
                 ...devices['Desktop Firefox'],
-                storageState: 'storageState.json'
+                storageState: 'storageState.json',
             },
-            testMatch: /demoblaze\.spec\.ts/
+            testMatch: /demoblaze\.spec\.ts/,
         },
 
         {
@@ -73,22 +80,22 @@ const config: PlaywrightTestConfig = {
             dependencies: ['Setup Demoblaze'],
             use: {
                 ...devices['Desktop Safari'],
-                storageState: 'storageState.json'
+                storageState: 'storageState.json',
             },
-            testMatch: /demoblaze\.spec\.ts/
+            testMatch: /demoblaze\.spec\.ts/,
         },
 
         /* Test against mobile viewports. */
         {
             name: 'Mobile Chrome',
             use: { ...devices['Pixel 5'] },
-            testIgnore: /demoblaze\.spec\.ts/
+            testIgnore: /demoblaze\.spec\.ts/,
         },
         {
             name: 'Mobile Safari',
             use: { ...devices['iPhone 12'] },
-            testIgnore: /demoblaze\.spec\.ts/
-        }
+            testIgnore: /demoblaze\.spec\.ts/,
+        },
 
         /* Test against branded browsers. */
         // {
@@ -99,7 +106,7 @@ const config: PlaywrightTestConfig = {
         //   name: 'Google Chrome',
         //   use: { ..devices['Desktop Chrome'], channel: 'chrome' },
         // },
-    ]
+    ],
 
     /* Run your local dev server before starting the tests */
     // webServer: {
